@@ -55,7 +55,7 @@ T-Statistic: 41.13423874186855
 
 p-value: 0.0
 
-Winning teams $clearly$ shoot better 3-pt% and make more 3-pointers than losing teams, but perhaps this is unsurprising. Shooting more accurately ought to relate to winning, afterall. What we would like to know is whether it benefits teams to take more 3-pointers. We can formalize this into a hypothesis:
+Winning teams clearly shoot better 3-pt% and make more 3-pointers than losing teams, but perhaps this is unsurprising. Shooting more accurately ought to relate to winning, afterall. What we would like to know is whether it benefits teams to take more 3-pointers. We can formalize this into a hypothesis:
 
 ## Hypothesis test 2: 
 ### H0: Winning teams and losing teams take the same percentage of their shots from 3-point range
