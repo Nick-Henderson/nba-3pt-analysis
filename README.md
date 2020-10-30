@@ -141,3 +141,8 @@ p-value: 5.32570586703954e-36
 T-Statistic: -0.541165084759902
 
 p-value: 0.5887611511021893
+
+As we can see, teams have very clearly made more 3-pointers per game during the past 6 years than they did in the 6 years prior. Surprisingly, they haven't shot any more accurately during this era. They have simply taken more 3-point shots. 
+
+## Conclusion:
+
