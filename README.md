@@ -31,7 +31,7 @@ Indeed we see this effect. This is likely a result of teams taking more layups a
 
 Lets begin by looking at the relationship between accurate 3-point shooting and winning games. To do so at a glance, we can look at the correlation between '3P%' (a measure of what percentage of 3-point shots are successful) and '+/-' (a stat tracking the difference in points between a team and their opponent).
 
-![](plots/7-corr-plus-minus-3pp.png)
+![](plots/7-corr-plus-minus-3pp-1.png)
 
 While the correlation is never very high, we do see a clear increase over time. That is, accurate 3-point shooting has a stronger relationship with winning than it did in years past. So, is the relationship between winning and 3-point shooting significant? To start simple, lets ignore the changes over time and simply ask; do winning teams make more 3-pointers than losing teams? and do winning teams shoot 3-pointers more accurately? 
 
