@@ -74,7 +74,9 @@ T-Statistic: 3.666347910434493
 p-value: 0.0002462639978413611
 
 
-Interesting! We can see now that winning teams take a larger percentage of their shots from 3-point range, so it is likely beneficial for teams to shoot more 3-pointers. 
+Interesting! We can see now that winning teams take a larger percentage of their shots from 3-point range. That said, the difference in the means is clearly quite small.
+
+## Looking at Teams
 
 So far we have looked at an aggregation of all individual games, but given that basketball is a team sport, perhaps it would be more informative to aggregate our data by team and season. To do so, I wrote a function that groups data by team and season, sums the rows, and then cleans up the rows for which summing is not the correct approach (like 3-point percentage).
 
@@ -143,6 +145,4 @@ T-Statistic: -0.541165084759902
 p-value: 0.5887611511021893
 
 As we can see, teams have very clearly made more 3-pointers per game during the past 6 years than they did in the 6 years prior. Surprisingly, they haven't shot any more accurately during this era. They have simply taken more 3-point shots. 
-
-## Conclusion:
 
