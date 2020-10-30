@@ -81,7 +81,7 @@ So far we have looked at an aggregation of all individual games, but given that 
 Now that we have data aggregated by team, we can look at the relationship between 3-point shooting stats and win percentage, instead of just breaking data into winners and losers. We can start with some scatter plots of win percentage vs 3-point accuracy.
 
 
-![](plots/13-team-colors-plots.png)
+![](plots/13-team-colors-plots-1.png)
 
 
 
