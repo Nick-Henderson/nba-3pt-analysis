@@ -50,7 +50,7 @@ T-Test 3-point percentage, winning teams vs losing teams, all seasons:
 T-Statistic: 68.93042010909377
 
 p-value: 0.0
-
+ 
 
 
 T-Test 3-pointers made, winning teams vs losing teams, all seasons:
@@ -74,8 +74,14 @@ T-Statistic: 3.666347910434493
 p-value: 0.0002462639978413611
 
 
+Interesting! We can see now that winning teams take a larger percentage of their shots from 3-point range, so it is likely beneficial for teams to shoot more 3-pointers. 
+
+So far we have looked at an aggregation of all individual games, but given that basketball is a team sport, perhaps it would be more informative to aggregate our data by team and season. To do so, I wrote a function that groups data by team and season, sums the rows, and then cleans up the rows for which summing is not the correct approach (like 3-point percentage).
+
+Now that we have data aggregated by team, we can look at the relationship between 3-point shooting stats and win percentage, instead of just breaking data into winners and losers. We can start with some scatter plots of win percentage vs 3-point accuracy.
 
 
+![](plots/13-team-colors-plots.png)
 
 
 
