@@ -50,7 +50,7 @@ T-Test 3-point percentage, winning teams vs losing teams, all seasons:
 T-Statistic: 68.93042010909377
 
 p-value: 0.0
-
+ 
 
 
 T-Test 3-pointers made, winning teams vs losing teams, all seasons:
