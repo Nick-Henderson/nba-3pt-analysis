@@ -45,7 +45,7 @@ While the correlation is never very high, we do see a clear increase over time. 
 
 ![](plots/8-hyp-test-1-dist.png)
 
-T-Test 3-point percentage, winning teams vs losing teams, all seasons:
+### T-Test 3-point percentage, winning teams vs losing teams, all seasons:
 
 T-Statistic: 68.93042010909377
 
@@ -53,7 +53,7 @@ p-value: 0.0
  
 
 
-T-Test 3-pointers made, winning teams vs losing teams, all seasons:
+### T-Test 3-pointers made, winning teams vs losing teams, all seasons:
 
 T-Statistic: 41.13423874186855
 
@@ -67,7 +67,7 @@ Winning teams clearly shoot better 3-pt% and make more 3-pointers than losing te
 
 ![](plots/ttest_per_shot_attempt_data.png)
 
-T-Test 3-pointers attempted per shot attempt, winning teams vs losing teams, full data set:
+### T-Test 3-pointers attempted per shot attempt, winning teams vs losing teams, full data set:
 
 T-Statistic: 3.666347910434493
 
@@ -78,12 +78,66 @@ Interesting! We can see now that winning teams take a larger percentage of their
 
 So far we have looked at an aggregation of all individual games, but given that basketball is a team sport, perhaps it would be more informative to aggregate our data by team and season. To do so, I wrote a function that groups data by team and season, sums the rows, and then cleans up the rows for which summing is not the correct approach (like 3-point percentage).
 
-Now that we have data aggregated by team, we can look at the relationship between 3-point shooting stats and win percentage, instead of just breaking data into winners and losers. We can start with some scatter plots of win percentage vs 3-point accuracy.
+Now that we have data aggregated by team, we can look at the relationship between 3-point shooting stats and win percentage, instead of just breaking data into winners and losers. We can start with some scatter plots of win percentage vs 3-point accuracy over the past several years.
 
 
 ![](plots/13-team-colors-plots-1.png)
 
+It looks like teams with win percentages above 50% shoot 3-pointers more accurately. We can test this hypothesis:
+
+## Hypothesis test 3: 
+### H0: On average, teams with winning records (>50% wins) and teams with losing records shoot 3 pointers more with equal accuracy
+### HA: On average, teams with winning records shoot 3 pointers more accurately then teams with losing records
+
+
+![](plots/ttest-3pt-accuracy-winningrecords-1.png)
+
+### T-Test 3-point accuracy, winning records vs losing records:
+
+T-Statistic: 8.954704445460825
+
+p-value: 3.2272003376026764e-18
+
+So teams with winning records are better at shooting 3-pointers. Of course, here we are looking at the full 25 year period. How has this changed over the years? To test this, we can do the same T-Test for each season in our data, and plot the p-values. Note that now we are looking at only 30 data points per season, so our p-values should be higher. 
+
+![](plots/ttest-years-3pt-accuracy-winning-losing-records-1.png)
+
+It appears that our p-values in recent years have been lower than those in years past, which aligns with the increased use of 3-pointers in the modern NBA.
+
+Finally, lets set up a hypothesis test to compare 3-point shooting across different time periods in the NBA. For this analysis, we will break the data into the period from 2014-2019 (the past 6 seasons, starting with the first of the recent Warriors championship seasons), and 2008-2013 (the 6 years prior).
+
+First we can look at the distribution of 3-pointers made per game for all teams each season.
+
+![](plots/15-distributions-12years-3pm.png)
+
+Interesting! we can see that from 2008-2013 the number of 3-pointers made per game stayed relatively steady, and fluctuated up and down over the time period. Conversely, from 2014-2019 we see a steady rightward shift each year. Teams are making more and more 3-pointers every year. 
+
+The same cannot be said for 3-point shooting accuracy:
+
+![](plots/16-distributions-12years-3pp.png)
+
+Lets formalize these impressions into two more hypothesis tests:
+
+## Hypothesis test 4: 
+### H0: On average, teams from 2008-2013 made the same number of 3 pointers per game as teams from 2014-2019
+### HA: Teams from 2014-2019 made more 3 pointers per game.
+
+## Parallel Hypothesis test:
+### H0: On average, teams from 2008-2013 shot 3 pointers with the same accuracy as teams from 2014-2019
+### HA: Teams from 2014-2019 were more accurate than teams from 2008-2013.
+
+![](plots/16-hyp-test-2-dist.png)
+
+### T-Test 3-pointers made, 2008-2013 vs 2014-2019:
+
+T-Statistic: 14.198786990565969
+
+p-value: 5.32570586703954e-36
 
 
 
+### T-Test 3-point accuracy, 2008-2013 vs 2014-2019:
 
+T-Statistic: -0.541165084759902
+
+p-value: 0.5887611511021893
