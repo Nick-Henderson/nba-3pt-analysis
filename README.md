@@ -77,7 +77,7 @@ p-value: 0.0002462639978413611
 
 
 
-To do so, we can look at the correlation between '3P%' (a measure of what percentage of 3-point shots are successful) and '+/-' (a stat tracking the difference in points between a team and their opponent).
+We can look at the correlation between '3P%' (a measure of what percentage of 3-point shots are successful) and '+/-' (a stat tracking the difference in points between a team and their opponent).
 
 
 ![](plots/7-corr-plus-minus-3pp.png)
